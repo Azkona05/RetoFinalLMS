@@ -1,0 +1,33 @@
+body{
+background-color :#fff59d;
+font-family: Verdana, Calibri, sans-serif;
+color:#1b3039;
+}
+h2{
+	text-align: center;
+}
+table {
+  width: 100%;
+  color:#1b3039;
+}
+
+table tr td a{
+	color:#1b3039;
+}
+a{
+	color:#fff59d;
+}
+a:hover{
+	color:red;
+}
+.fotos{
+	display: flex;
+	justify-content: space-around;
+	padding:0.5%;
+}
+table {
+	padding:0.5%;
+}
+table, th, td {
+	border: 2px solid black;
+}

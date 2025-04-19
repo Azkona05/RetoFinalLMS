@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    <xs:element name="agenciaViajes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="aerolineas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="aerolinea" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="url" type="xs:string"/>
+                                        <xs:element name="destinos">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="destino" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="nombre" type="xs:string"/>
+                                                                <xs:element name="img">
+                                                                    <xs:complexType>
+                                                                        <xs:attribute name="enlace" type="xs:string"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                                <xs:element name="descripcion" type="xs:string"/>
+                                                            </xs:sequence>
+                                                            <xs:attribute name="id" type="xs:integer"/>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="tipo">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="comercial"/>
+                                                <xs:enumeration value="privada"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="usuarios">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="usuario" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"/>
+                                        <xs:element name="apellido" type="xs:string"/>
+                                        <xs:element name="clave" type="xs:string"/>
+                                        <xs:element name="numTel">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:string">
+                                                    <xs:pattern value="\d{9}"/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>                                        
+                                        <xs:element name="contacto">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:choice minOccurs="1">
+                                                        <xs:element name="correo" type="xs:string"/>
+                                                        <xs:element name="numero2">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:integer">
+                                                                    <xs:pattern value="\d{9}"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:element>
+                                                    </xs:choice>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="sexo">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">                               
+                                                <xs:enumeration value="M"/>
+                                                <xs:enumeration value="F"/>
+                                                <xs:enumeration value="O"/> 
+                                            </xs:restriction>                                   
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                    <xs:attribute name="dni">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:pattern value="\d{8}[A-Za-z]"/>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:complexType>         
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="vuelos">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="vuelo" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="destinoId" type="xs:integer"/>
+                                        <xs:element name="fecha" type="xs:date"/>
+                                        <xs:element name="pasajeros">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="pasajero" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:attribute name="dni" type="xs:string"/>
+                                                        </xs:complexType>                                                 
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="opiniones">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="opinion" maxOccurs="unbounded">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name = "estrellas" type = "xs:integer"/>
+                                                                <xs:element name = "comentario" type = "xs:string"/>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="id" type="xs:integer"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element> 
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,70 @@
+/* ESTILOS DEL BODY */
+	article {
+	  font-family: Verdana, Calibri, sans-serif;
+	  background-color: #fff59d; /* Color de fondo de la página */
+	  margin: 0;
+	  padding: 0;
+	  display: flex;
+	  justify-content: center; /* Centra el contenido horizontalmente */
+	  align-items: center; /* Centra el contenido verticalmente */
+	}
+/* ESTILOS DEL FORM */
+	form {
+	  background-color: white; /* Fondo del formulario */
+	  padding: 50px;
+	  width: 100%;
+	  max-width: 500px; /* Limita el ancho máximo del formulario */
+	}
+/* ESTILOS DE LOS LABELS */
+	label {
+	  font-weight: bold; /* Labels en negrita */
+	  display: inline-block; /* Para ordenar labels e inputs */
+	  margin-bottom: 5px; /* Espacio entre el label y el input */
+	}
+	.texto_largo {
+	  display: flex;
+	  align-items: center;
+	  margin-bottom: 15px; /* Espacio entre el label y el input */
+	}
+/* ESTILOS DE LOS INPUTS */
+	input[type="text"], input[type="password"], select, input[type="radio"], input[type="checkbox"] {
+	  width: 100%;
+	  padding: 10px;
+	  margin-bottom: 15px; /* Espacio entre los campos */
+	  border: 2px solid #ccc; /* Color del borde */
+	  border-radius: 5px; /* Bordes redondeados */
+	  font-size: 16px;
+	}
+	input[type="radio"], input[type="checkbox"] {
+	  width: auto; /* No ocupar todo el ancho en los radio/checkbox */
+	  margin-right: 10px; /* Espacio entre el radio o el checkbox y el label */
+	}
+	input[type="submit"] {
+	  background-color: #4CAF50; /* Color verde para el botón */
+	  color: white; /* Color del texto */
+	  padding: 12px 20px;
+	  border: none; /* Sin borde */
+	  border-radius: 5px;
+	  font-size: 16px;
+	  cursor: pointer; /* La "flechita" del puntero cambia a la "manita" al pasar sobre el botón */
+	  width: 100%;
+	  margin-top: 20px;
+	}
+	input[type="submit"]:hover {
+	  background-color: #45a049; /* Cambio de color al pasar el ratón */
+	}
+/* RESALTAR EN VERDE EL INPUT EN EL QUE ESTEMOS */
+	input[type="text"]:focus, input[type="password"]:focus, select:focus {
+	  border-color: #4CAF50; 
+	  outline: none; /* Deshace el borde por defecto para que solo se vea el verde */
+	}
+/* MOLDEAR EL FORMULARIO EN PANTALLAS MAS PEQUEÑAS */
+	@media (max-width: 600px) {
+	  form {
+		width: 90%;
+		padding: 15px;
+	  }
+	  input[type="submit"] {
+		width: 100%;
+	  }
+	}

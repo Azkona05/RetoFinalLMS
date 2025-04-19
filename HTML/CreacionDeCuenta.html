@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Creaci&oacute;n de cuenta</title>
+		<link rel="stylesheet" href="../CSS/CSS_Crear_cuenta.css">
+		<link rel="stylesheet" href="../CSS/CSSFooter.css">
+		<link rel="stylesheet" href="../CSS/CSSNavDef.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	</head>
+	<body>
+		<header>
+			<a href="principal.html"><img src="..\RECURSOS\Logo.png" class="logo"></a>
+			<nav>
+				<ul class="menu-principal">
+					<li><a href="CreacionDeCuenta.html">Crear Cuenta</a></li>
+					<li class="opcion-sin-enlace">Transportes
+						<ul class="submenus">
+							<li><a href="TransportesAviones.html">Aviones</a></li>
+						</ul>
+					</li>
+					<li><a href="MapaDeImagen.html">Destinos</a></li>
+					<li><a href="prueba.html">Prueba</a></li>
+					<li><a href="principal.html#opiniones">Opiniones</a></li>
+					<li class="opcion-sin-enlace">M&aacute;s Buscados
+						<ul class="submenus">
+							<li><a href="Roma.html">Roma</a></li>
+							<li><a href="Atenas.html">Atenas</a></li>
+							<li><a href="Londres.html">Londres</a></li>
+						</ul>
+					</li>
+				</ul>					
+			</nav>
+		</header>
+		<article>
+			<!--FORMULARIO-->
+			<form action="../PHP/Form.php" method="post">
+				<!--NOMBRE Y APELLIDO-->
+				<label for="nombre">Nombre:</label><br>
+				<input type="text" id="nombre" name="nombre"required><br>
+				<label for="apellidos">Apellidos:</label><br>
+				<input type="text" id="apellidos" name="apellidos" required><br/>
+				<!--SEXO-->
+				<label for="sexo" required>Sexo con el que se identifica:</label><br>
+				<input type="radio" id="hombre" name="sexo" required>
+				<label for="hombre">Hombre</label><br>
+				<input type="radio" id="mujer" name="sexo">
+				<label for="mujer">Mujer</label><br>
+				<input type="radio" id="otros" name="sexo">
+				<label for="otros">Otros</label><br/>
+				<!--GMAIL-->
+				<label for="gmail">Introduzca un correo electr&oacute;nico:</label><br/>
+				<input type="text" id="gmail" name="gmail" required><br/>
+				<!--CONTRASEÑA-->
+				<label for="contraseña1">Introduzca la contraseña:</label><br/>
+				<input type="password" id="contraseña1" name="contraseña1" required><br/>
+				<!--VERIFICACIÓN DE CONTRASEÑA-->
+				<label for="contraseña2">Introduzca la contraseña de nuevo:</label><br/>
+				<input type="password" id="contraseña2" name="contraseña2" required><br/>
+				<!--TÉLEFONO-->
+				<label for="telefono">Introduzca un tel&eacute;fono de contacto:</label><br/>
+				<select name="prefijo" id="prefijo" required>
+					<option value=""></option>
+					<option value="españa">España: +34</option>
+					<option value="alemania">Alemania: +49</option>
+					<option value="francia">Francia: +33</option>
+					<option value="italia">Italia: +39</option>
+					<option value="reinounido">Reino Unido: +44</option>
+					<option value="rusia">Rusia: +7</option>
+					<option value="ucrania">Ucrania: +380</option>
+					<option value="polonia">Polonia: +48</option>
+					<option value="rumania">Rumania: +40</option>
+					<option value="paisesbajos">Países Bajos: +31</option>
+					<option value="belgica">Bélgica: +32</option>
+					<option value="grecia">Grecia: +30</option>
+					<option value="portugal">Portugal: +351</option>
+					<option value="suecia">Suecia: +46</option>
+					<option value="noruega">Noruega: +47</option>
+				</select>
+				<input type="text" id="telefono" name="telefono" required><br/>
+				<!--PUBLICIDAD Y TÉRMINOS-->
+				<div class="texto_largo">
+					<input type="checkbox" id="publicidad" name="publicidad" value="publicidad">
+					<label for="publicidad"> Acepto que se me envie publicidad v&iacute;a correo electr&oacute;nico/SMS</label><br>
+				</div>
+				<input type="checkbox" id="terminos" name="terminos" value="terminos" required>
+				<label for="terminos"> Acepto los <a href="estamosTrabajandoEnEllo.html">t&eacute;rminos y condiciones</a></label><br>
+				<!--ACEPTAR-->
+				<input type="submit" value="ACEPTAR">
+			</form><br/>
+		</article>
+		<footer><!--REDES SOCIALES-->
+			<div class="ContenedorFooter">
+				<div class="Iconos">
+					<a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+					<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+					<a href="https://x.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+					<a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+				</div>					
+			</div>
+			<div class="Copyright">
+				<p>Copyright &copy;2025; Diseñado por:  <span class="Creador">Tartanga</span></p>
+			</div>			
+		</footer>
+	</body>
+</html>

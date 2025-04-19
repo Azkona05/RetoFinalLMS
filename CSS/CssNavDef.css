@@ -1,0 +1,188 @@
+/* Reseteo de márgenes y rellenos globalmente, y fuente por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que los bordes y rellenos no afecten el tamaño total */
+    font-family: Georgia, serif; /* Fuente predeterminada */
+}
+
+/* Estilo global del cuerpo */
+html body {
+	height: 100%; 
+   	width: 100%; 
+}
+
+
+body {
+    background-color: #fff59d;
+}
+
+/* Contenedor del header */
+header {
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 ;
+	margin-bottom:5px;
+    height: 115px;
+	width:100%;
+	flex:wrap;
+	flex: 1 1 100%;
+	position: relative;
+	padding:0 5%;
+
+}
+nav {
+	flex-wrap: wrap;
+	flex-direction: row;	
+}
+
+header a {
+	text-decoration: none; /* Evita que el enlace tenga subrayado */
+    display: flex; /* Hace que el logo esté alineado correctamente */
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+/* Logo */
+.logo {
+	height: 175%; /* El logo toma la altura completa del contenedor */
+    max-height: 200px; /* Limita el tamaño máximo del logo */
+    width: auto; /* Mantiene la relación de aspecto */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.2); /* Efecto de escala al pasar el mouse */
+}
+
+/* Menú principal */
+.menu-principal {
+    list-style: none;
+    display: flex;
+}
+
+.menu-principal li {
+    position: relative;
+    padding: 0 20px;
+}
+.menu-principal .opcion-sin-enlace {
+	color: #fff;
+	font-weight: bold;
+	transition: transform 0.3s ease;
+}
+.menu-principal .opcion-sin-enlace:hover {
+	transform: scale(1.2); /* Efecto de escala en el enlace */
+	color:#fff59d
+}
+
+.menu-principal a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.menu-principal a:hover {
+    transform: scale(1.2); /* Efecto de escala en el enlace */
+	color:#fff59d
+}
+
+/* Submenú */
+.submenus {
+    display: none;
+	list-style:none;
+    position: absolute;
+    background-color: #111;
+    min-width: 140px;
+    padding: 10px 0;
+    border-radius: 5px;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-principal li:hover .submenus {
+    display: block;
+    transform: scale(1); /* Efecto de aparición */
+    opacity: 1;
+}
+
+.submenus li {
+    padding: 8px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submenus li:hover {
+    background-color: #333;
+}
+
+
+/* Estilo para el botón de audio */
+.audio-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+}
+
+/* Control de audio */
+audio {
+    margin-left: 10px;
+    width: 200px;
+}
+@media all and (max-width: 1000px) {
+	/* Contenedor principal */
+	.contenedor {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/* Header en columna */
+	header {
+		order: 1;
+		background-color: #111;
+		height: auto;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		position: relative;
+		padding: 0 5%;
+	}
+
+	/* Menú principal */
+	nav {
+		padding-top:50px;
+		padding-bottom:25px;
+		order:2;
+		width: 100%;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.menu-principal {
+		flex-direction: column;
+		width: 100%;
+		padding: 0;
+		align-items: center;
+	}
+
+	.menu-principal li {
+		position: relative;
+		padding: 15px;
+	}
+
+	/* Submenú */
+	.submenus {
+		display: none;
+		left: 100%;
+		top:0;
+	}
+}

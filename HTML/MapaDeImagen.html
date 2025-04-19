@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="..\CSS\CssNavDef.css" />
+	<link rel="stylesheet" href="..\CSS\CSSFooter.css">
+	<link rel="stylesheet" href="..\CSS\CssMapaImagen.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+		integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<header>
+		<a href="principal.html"><img src="..\RECURSOS\Logo.png" class="logo"></a>
+		<nav>
+			<ul class="menu-principal">
+				<li><a href="CreacionDeCuenta.html">Crear Cuenta</a></li>
+				<li class="opcion-sin-enlace">Transportes
+					<ul class="submenus">
+						<li><a href="TransportesAviones.html">Aviones</a></li>
+					</ul>
+				</li>
+				<li><a href="MapaDeImagen.html">Destinos</a></li>
+				<li><a href="prueba.html">Prueba</a></li>
+				<li><a href="principal.html#opiniones">Opiniones</a></li>
+				<li class="opcion-sin-enlace">M&aacute;s Buscados
+					<ul class="submenus">
+						<li><a href="Roma.html">Roma</a></li>
+						<li><a href="Atenas.html">Atenas</a></li>
+						<li><a href="Londres.html">Londres</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h2>Mapa de destinos</h2>
+		<p>Pincha el destino al que quieras viajar:</p>
+
+		<!-- Contenedor para la imagen con mapa interactivo -->
+		<div class="map-container">
+			<img id="mapImage" src="..\RECURSOS\MapaEuropa.jpg" usemap="#workmap">
+			<map name="workmap" id="workmap">
+				<area shape="circle" coords="288,495,5" alt="Londres" href="..\HTML\Londres.html">
+				<area shape="circle" coords="509,513,5" alt="Berlin" href="..\HTML\Berlin.html">
+				<area shape="circle" coords="468,776,5" alt="Roma" href="..\HTML\Roma.html">
+				<area shape="circle" coords="142,755,5" alt="Madrid" href="..\HTML\Madrid.html">
+				<area shape="circle" coords="522,560,5" alt="Praga" href="..\HTML\Praga.html">
+				<area shape="circle" coords="694,888,5" alt="Atenas" href="..\HTML\Atenas.html">
+				<area shape="circle" coords="203,421,5" alt="Dublin" href="..\HTML\Dublin.html">
+				<area shape="circle" coords="260,725,5" alt="Andorra" href="..\HTML\Andorra.html">
+				<<area shape="circle" coords="793,794,5" alt="Estambul" href="..\HTML\Estambul.html">>
+			</map>
+		</div>
+	</main>
+	<footer><!--REDES SOCIALES-->
+		<div class="ContenedorFooter">
+			<div class="Iconos">
+				<a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+				<a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://x.com/?lang=es"><i class="fa-brands fa-twitter"></i></a>
+				<a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+			</div>
+		</div>
+		<div class="Copyright">
+			<p>Copyright &copy;2025; Diseñado por: <span class="Creador">Tartanga</span></p>
+		</div>
+	</footer>
+
+	<script>
+		function adjustMapCoordinates() {
+			const img = document.getElementById('mapImage');
+			const map = document.getElementById('workmap');
+			const areas = map.getElementsByTagName('area');
+
+			const imgWidth = img.offsetWidth;
+			const imgHeight = img.offsetHeight;
+
+			for (let area of areas) {
+				// Obtener las coordenadas originales
+				const coords = area.getAttribute('coords').split(',');
+
+				// Escalar las coordenadas según el tamaño actual de la imagen
+				const scaledCoords = coords.map(coord => {
+					return Math.round(coord * (coord === coords[0] || coord === coords[1] ? imgWidth / img.naturalWidth : imgHeight / img.naturalHeight));
+				});
+
+				// Asignar las coordenadas escaladas
+				area.setAttribute('coords', scaledCoords.join(','));
+			}
+		}
+		// Ajuste cuando la imagen se carga o cuando cambia el tamaño de la ventana
+		window.addEventListener('load', adjustMapCoordinates);
+		window.addEventListener('resize', adjustMapCoordinates);
+	</script>
+</body>
+
+</html>

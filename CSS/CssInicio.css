@@ -1,0 +1,98 @@
+/*Universal*/
+*{
+	font-family:verdana,calibre,sans-sherif;
+}
+
+
+/*Cabecera*/
+.cabecera {
+	display:flex;
+	align-items:center; /*centra los elementos del logo y audio*/
+}
+.logo {
+	flex:5;/*ocupa 5 de la pantalla*/
+	
+}
+.audio {
+	flex:1;/*ocupa 1 de la pantalla*/
+}
+
+
+/*Navegación Menú*/
+nav {
+	margin-top:0.5%;
+	margin-bottom:0.5%;
+	border:1px;
+}
+ul {
+	list-style-type: none; /* quita los puntos de las tablas */
+	background-color: #4169E1; /* fondo negro */
+	display: flex;
+	justify-content: space-between;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+}
+
+li {
+	flex-grow: 1; /* permite que los elementos ocupen el mismo espacio */
+}
+
+li a {
+	display: block;
+	color: white;
+	text-decoration: none; /* quita la marca de los enlaces */
+	padding: 12px 16px;
+	text-align: center;
+}
+
+li a:hover { /* cuando pasas el raton por encima */
+	background-color: #00BFFF;
+}
+
+.lista {
+	position: relative; /* permite la posición del submenú */
+}
+
+.sublista {
+	display: none;
+	position: absolute;
+	background-color: #FAEBD7;
+	width: 100%; /* hace que el submenú ocupe el mismo ancho */
+}
+
+.sublista a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.sublista a:hover {
+	background-color: #00BFFF;
+	color: white;
+}
+
+.lista:hover .sublista {
+	display: block;
+}
+
+/*Contenido*/
+.contenido {
+	display:flex;
+}
+section {
+	flex: 2;
+	text-align:center;
+}
+.avion{
+	flex:2;
+	width:100%;
+}
+aside {
+	flex: 1;
+	text-align:center;
+	background-color:LightGrey;
+}
+
+/*Footer*/

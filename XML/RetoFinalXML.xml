@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
+-->
+<agenciaViajes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="RetoFinalXSD.xsd">
+    <aerolineas>
+        <aerolinea tipo="comercial">
+            <nombre>Ryanair</nombre>
+            <url>https://www.ryanair.com/es/es</url>
+            <destinos>
+                <destino id = "1">
+                    <nombre>Dublin</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Dublin"></img>
+                    <descripcion>Capital de Irlanda, famosa por su historia y cultura.</descripcion>
+                </destino>
+                <destino id ="2">
+                    <nombre>Londres</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Londres"></img>
+                    <descripcion>Ciudad vibrante, conocida por sus museos y monumentos históricos.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="comercial">
+            <nombre>Vueling</nombre>
+            <url>https://www.vueling.com/</url>
+            <destinos>
+                <destino id = "3">
+                    <nombre>Madrid</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Madrid"></img>
+                    <descripcion>La capital de España, famosa por su vida nocturna y museos.</descripcion>
+                </destino>
+                <destino id = "4">
+                    <nombre>Andorra</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Andorra"></img>
+                    <descripcion>Un pequeño país montañoso entre Francia y España, ideal para deportes de invierno.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="comercial">
+            <nombre>Volotea</nombre>
+            <url>https://www.volotea.com/es/</url>
+            <destinos>
+                <destino id = "5">
+                    <nombre>Roma</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Roma"></img>
+                    <descripcion>La ciudad eterna, llena de historia y monumentos impresionantes.</descripcion>
+                </destino>
+                <destino id = "6">
+                    <nombre>Atenas</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Atenas"></img>
+                    <descripcion>Capital de Grecia, famosa por sus ruinas antiguas como la Acrópolis.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="comercial">
+            <nombre>KLM</nombre>
+            <url>https://www.klm.es</url>
+            <destinos>
+                <destino id = "7">
+                    <nombre>Berlin</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\XML_XSD/Berlin"></img>
+                    <descripcion>Capital de Alemania, famosa por su historia, museos y arquitectura moderna.</descripcion>
+                </destino>
+                <destino id = "8">
+                    <nombre>Praga</nombre>
+                    <img enlace=""></img>
+                    <descripcion>Ciudad checa conocida por su castillo medieval y su casco antiguo.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="comercial">
+            <nombre>Turkish Airlines</nombre>
+            <url>https://www.turkishairlines.com/</url>
+            <destinos>
+                <destino id = "9">
+                    <nombre>Turquia</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Turquia"></img>
+                    <descripcion>Un país que une Europa y Asia, famoso por sus ruinas antiguas y paisajes únicos.</descripcion>
+                </destino>
+                <destino id = "6">
+                    <nombre>Atenas</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Atenas"></img>
+                    <descripcion>Capital de Grecia, famosa por sus ruinas antiguas como la Acrópolis.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="privada">
+            <nombre>NetJets</nombre>
+            <url>https://www.netjets.com/es-es/</url>
+            <destinos>
+                <destino id = "7">
+                    <nombre>Berlin</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Berlin"></img>
+                    <descripcion>Capital de Alemania, famosa por su historia, museos y arquitectura moderna.</descripcion>
+                </destino>
+                <destino id = "5">
+                    <nombre>Roma</nombre>
+                    <img enlace=""></img>
+                    <descripcion>La ciudad eterna, llena de historia y monumentos impresionantes.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="privada">
+            <nombre>Air Charter Service</nombre>
+            <url>https://www.aircharterservice.es/</url>
+            <destinos>
+                <destino id = "2">
+                    <nombre>Londres</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Londres"></img>
+                    <descripcion>Ciudad vibrante, conocida por sus museos y monumentos históricos.</descripcion>
+                </destino>
+                <destino id = "3">
+                    <nombre>Madrid</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Madrid"></img>
+                    <descripcion>La capital de España, famosa por su vida nocturna y museos.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="privada">
+            <nombre>Chapman</nombre>
+            <url>https://chapmanfreeborn.aero/es/</url>
+            <destinos>
+                <destino id = "4">
+                    <nombre>Andorra</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Andorra"></img>
+                    <descripcion>Un pequeño país montañoso entre Francia y España, ideal para deportes de invierno.</descripcion>
+                </destino>
+                <destino id = "8">
+                    <nombre>Praga</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Praga"></img>
+                    <descripcion>Ciudad checa conocida por su castillo medieval y su casco antiguo.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="privada">
+            <nombre>LunaJets</nombre>
+            <url>https://www.lunajets.com/es</url>
+            <destinos>
+                <destino id = "9">
+                    <nombre>Turquia</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Turquia"></img>
+                    <descripcion>Un país que une Europa y Asia, famoso por sus ruinas antiguas y paisajes únicos.</descripcion>
+                </destino>
+                <destino id = "1">
+                    <nombre>Dublin</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Dublin"></img>
+                    <descripcion>Capital de Irlanda, famosa por su historia y cultura.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+        <aerolinea tipo="privada">
+            <nombre>Europair</nombre>
+            <url>https://www.europair.com</url>
+            <destinos>
+                <destino id = "7">
+                    <nombre>Berlin</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Berlin"></img>
+                    <descripcion>Capital de Alemania, famosa por su historia, museos y arquitectura moderna.</descripcion>
+                </destino>
+                <destino id = "5">
+                    <nombre>Roma</nombre>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Roma"></img>
+                    <descripcion>La ciudad eterna, llena de historia y monumentos impresionantes.</descripcion>
+                </destino>
+            </destinos>
+        </aerolinea>
+    </aerolineas>
+    <usuarios>
+        <usuario sexo="M" dni="12345678A">
+            <nombre>Juan</nombre>
+            <apellido>Pérez</apellido>
+            <clave>clave123</clave>
+            <numTel>654987321</numTel>
+            <contacto>
+                <correo>juanperez@example.com</correo>
+            </contacto>         
+        </usuario>
+        <usuario sexo="F" dni="87654321B">
+            <nombre>Maria</nombre>
+            <apellido>González</apellido>
+            <clave>clave456</clave>
+            <numTel>612345678</numTel>
+            <contacto>
+                <numero2>555555555</numero2>
+            </contacto>  
+        </usuario>
+    </usuarios>  
+    <vuelos>
+        <vuelo id="1">
+            <destinoId>1</destinoId>
+            <fecha>2025-04-10</fecha>
+            <pasajeros>
+                <pasajero dni="12345678A"/>
+                <pasajero dni="87654321B"/>
+            </pasajeros>
+            <opiniones>
+                <opinion>
+                    <estrellas>5</estrellas>
+                    <comentario>Excelente servicio, puntualidad y comodidad.</comentario>
+                </opinion>
+                <opinion>
+                    <estrellas>4</estrellas>
+                    <comentario>Buen vuelo, pero la comida podría mejorar.</comentario>
+                </opinion>
+            </opiniones>
+        </vuelo>
+    </vuelos> 
+</agenciaViajes>

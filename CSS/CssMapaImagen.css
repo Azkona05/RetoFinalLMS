@@ -1,0 +1,35 @@
+body{
+background-color: #fff59d;
+font-family: Verdana, Calibri, sans-serif;
+}
+h2{
+text-align: center;
+}
+
+a{
+	color:black;
+}
+
+a:hover{
+	color:blue;
+}
+footer{
+	
+	font-family: Verdana, Calibri, sans-serif;
+}
+main {
+	padding-top:2.7%
+}
+.map-container {
+   width: 100%;
+   max-width: 100%;
+   position: relative;
+}
+
+img {
+   width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+   height: auto; /* Mantiene la proporción de la imagen */
+   max-width: 100%; /* No se puede expandir más allá del 100% del contenedor */
+   display: block; /* Elimina cualquier espacio debajo de la imagen */
+   margin: 0 auto; /* Centra la imagen horizontalmente */
+}
