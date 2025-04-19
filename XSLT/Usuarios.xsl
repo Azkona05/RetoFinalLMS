@@ -7,7 +7,7 @@
   <xsl:template match="/">
     <html>
       <head>
-        <title>Cuenta creada</title>
+        <title>Cuentas</title>
         <style>
           body { font-family: Arial; padding: 20px; }
           h1 { color: #2c3e50; }
@@ -15,7 +15,7 @@
         </style>
       </head>
       <body>
-        <h1>Cuenta creada con éxito</h1>
+        <h1>Cuentas</h1>
         <xsl:apply-templates select="usuario"/>
       </body>
     </html>
