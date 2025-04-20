@@ -31,6 +31,8 @@ $output = shell_exec($comando);
 
 // Verifica si BaseX devolvió algo
 if (!$output) {
+    echo "<pre>Comando BaseX: $comando</pre>";
+
     echo "Error al ejecutar el comando BaseX.";
     exit;
 }
