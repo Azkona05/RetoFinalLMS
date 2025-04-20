@@ -1,5 +1,4 @@
 <?php
-// Recoger datos del formulario
 $nombre = $_POST['nombre'] ?? '';
 $apellidos = $_POST['apellidos'] ?? '';
 $sexo = $_POST['sexo'] ?? '';
@@ -10,15 +9,14 @@ $prefijo = $_POST['prefijo'] ?? '';
 $telefono = $_POST['telefono'] ?? '';
 $publicidad = isset($_POST['publicidad']) ? 'Sí' : 'No';
 
-// Validar contraseñas
 if ($contraseña1 !== $contraseña2) {
     echo "Las contraseñas no coinciden.";
     exit;
 }
 
-// Ejecutar XQuery con BaseX
-$comando = sprintf(
-    'basex -bnombre=%s -bapellidos=%s -bsexo=%s -bgmail=%s -btelefono=%s -bpublicidad=%s ../XQUERY/XQueryAlta.xq',
+// Inserción del nuevo usuario
+$insertCommand = sprintf(
+    'basex -bnombre=%s -bapellidos=%s -bsexo=%s -bgmail=%s -btelefono=%s -bpublicidad=%s ../XQUERY/InsertarUsuario.xq',
     escapeshellarg($nombre),
     escapeshellarg($apellidos),
     escapeshellarg($sexo),
@@ -26,29 +24,26 @@ $comando = sprintf(
     escapeshellarg($prefijo . $telefono),
     escapeshellarg($publicidad)
 );
+shell_exec($insertCommand);
 
-$output = shell_exec($comando);
+// Mostrar todos los usuarios (tras la inserción)
+$mostrarCommand = 'basex ../XQUERY/MostrarUsuarios.xq';
+$output = shell_exec($mostrarCommand);
 
-// Verifica si BaseX devolvió algo
 if (!$output) {
-    echo "<pre>Comando BaseX: $comando</pre>";
-
-    echo "Error al ejecutar el comando BaseX.";
+    echo "Error al obtener la lista de usuarios.";
     exit;
 }
 
-// Cargar el XML desde el output
+// Transformar XML con XSLT
 $xml = new DOMDocument();
 $xml->loadXML($output);
 
-// Cargar el archivo XSLT
 $xsl = new DOMDocument();
 $xsl->load('../XSLT/Usuarios.xsl');
 
-// Procesar la transformación con XSLTProcessor
 $xslt = new XSLTProcessor();
 $xslt->importStylesheet($xsl);
 
-// Transformar y mostrar como HTML
 echo $xslt->transformToXML($xml);
 ?>
