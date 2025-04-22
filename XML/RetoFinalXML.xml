@@ -171,7 +171,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Juan</nombre>
             <apellido>Pérez</apellido>
             <clave>clave123</clave>
-            <numTel>654987321</numTel>
+            <numTel>+34654987321</numTel>
             <contacto>
                 <correo>juanperez@example.com</correo>
             </contacto>         
@@ -180,7 +180,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Maria</nombre>
             <apellido>González</apellido>
             <clave>clave456</clave>
-            <numTel>612345678</numTel>
+            <numTel>+34612345678</numTel>
             <contacto>
                 <numero2>555555555</numero2>
             </contacto>  
