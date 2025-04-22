@@ -1,4 +1,4 @@
-declare variable $doc := doc("RetoFinal.xml");
+declare variable $doc := doc("RetoFinalXML.xml");
 
 (: Seleccionar todos los usuarios :)
 let $usuarios := $doc/agenciaViajes/usuarios/usuario

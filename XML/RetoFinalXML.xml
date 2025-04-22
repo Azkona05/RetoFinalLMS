@@ -3,21 +3,20 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this template
 -->
-<agenciaViajes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               xsi:noNamespaceSchemaLocation="RetoFinalXSD.xsd">
+<agenciaViajes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="RetoFinalXSD.xsd">
     <aerolineas>
         <aerolinea tipo="comercial">
             <nombre>Ryanair</nombre>
             <url>https://www.ryanair.com/es/es</url>
             <destinos>
-                <destino id = "1">
+                <destino id="1">
                     <nombre>Dublin</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Dublin"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Dublin"/>
                     <descripcion>Capital de Irlanda, famosa por su historia y cultura.</descripcion>
                 </destino>
-                <destino id ="2">
+                <destino id="2">
                     <nombre>Londres</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Londres"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Londres"/>
                     <descripcion>Ciudad vibrante, conocida por sus museos y monumentos históricos.</descripcion>
                 </destino>
             </destinos>
@@ -26,14 +25,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Vueling</nombre>
             <url>https://www.vueling.com/</url>
             <destinos>
-                <destino id = "3">
+                <destino id="3">
                     <nombre>Madrid</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Madrid"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Madrid"/>
                     <descripcion>La capital de España, famosa por su vida nocturna y museos.</descripcion>
                 </destino>
-                <destino id = "4">
+                <destino id="4">
                     <nombre>Andorra</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Andorra"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Andorra"/>
                     <descripcion>Un pequeño país montañoso entre Francia y España, ideal para deportes de invierno.</descripcion>
                 </destino>
             </destinos>
@@ -42,14 +41,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Volotea</nombre>
             <url>https://www.volotea.com/es/</url>
             <destinos>
-                <destino id = "5">
+                <destino id="5">
                     <nombre>Roma</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Roma"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Roma"/>
                     <descripcion>La ciudad eterna, llena de historia y monumentos impresionantes.</descripcion>
                 </destino>
-                <destino id = "6">
+                <destino id="6">
                     <nombre>Atenas</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Atenas"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Atenas"/>
                     <descripcion>Capital de Grecia, famosa por sus ruinas antiguas como la Acrópolis.</descripcion>
                 </destino>
             </destinos>
@@ -58,14 +57,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>KLM</nombre>
             <url>https://www.klm.es</url>
             <destinos>
-                <destino id = "7">
+                <destino id="7">
                     <nombre>Berlin</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\XML_XSD/Berlin"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\XML_XSD/Berlin"/>
                     <descripcion>Capital de Alemania, famosa por su historia, museos y arquitectura moderna.</descripcion>
                 </destino>
-                <destino id = "8">
+                <destino id="8">
                     <nombre>Praga</nombre>
-                    <img enlace=""></img>
+                    <img enlace=""/>
                     <descripcion>Ciudad checa conocida por su castillo medieval y su casco antiguo.</descripcion>
                 </destino>
             </destinos>
@@ -74,14 +73,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Turkish Airlines</nombre>
             <url>https://www.turkishairlines.com/</url>
             <destinos>
-                <destino id = "9">
+                <destino id="9">
                     <nombre>Turquia</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Turquia"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Turquia"/>
                     <descripcion>Un país que une Europa y Asia, famoso por sus ruinas antiguas y paisajes únicos.</descripcion>
                 </destino>
-                <destino id = "6">
+                <destino id="6">
                     <nombre>Atenas</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Atenas"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Atenas"/>
                     <descripcion>Capital de Grecia, famosa por sus ruinas antiguas como la Acrópolis.</descripcion>
                 </destino>
             </destinos>
@@ -90,14 +89,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>NetJets</nombre>
             <url>https://www.netjets.com/es-es/</url>
             <destinos>
-                <destino id = "7">
+                <destino id="7">
                     <nombre>Berlin</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Berlin"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Berlin"/>
                     <descripcion>Capital de Alemania, famosa por su historia, museos y arquitectura moderna.</descripcion>
                 </destino>
-                <destino id = "5">
+                <destino id="5">
                     <nombre>Roma</nombre>
-                    <img enlace=""></img>
+                    <img enlace=""/>
                     <descripcion>La ciudad eterna, llena de historia y monumentos impresionantes.</descripcion>
                 </destino>
             </destinos>
@@ -106,14 +105,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Air Charter Service</nombre>
             <url>https://www.aircharterservice.es/</url>
             <destinos>
-                <destino id = "2">
+                <destino id="2">
                     <nombre>Londres</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Londres"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Londres"/>
                     <descripcion>Ciudad vibrante, conocida por sus museos y monumentos históricos.</descripcion>
                 </destino>
-                <destino id = "3">
+                <destino id="3">
                     <nombre>Madrid</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Madrid"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Madrid"/>
                     <descripcion>La capital de España, famosa por su vida nocturna y museos.</descripcion>
                 </destino>
             </destinos>
@@ -122,14 +121,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Chapman</nombre>
             <url>https://chapmanfreeborn.aero/es/</url>
             <destinos>
-                <destino id = "4">
+                <destino id="4">
                     <nombre>Andorra</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Andorra"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Andorra"/>
                     <descripcion>Un pequeño país montañoso entre Francia y España, ideal para deportes de invierno.</descripcion>
                 </destino>
-                <destino id = "8">
+                <destino id="8">
                     <nombre>Praga</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Praga"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Praga"/>
                     <descripcion>Ciudad checa conocida por su castillo medieval y su casco antiguo.</descripcion>
                 </destino>
             </destinos>
@@ -138,14 +137,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>LunaJets</nombre>
             <url>https://www.lunajets.com/es</url>
             <destinos>
-                <destino id = "9">
+                <destino id="9">
                     <nombre>Turquia</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Turquia"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Turquia"/>
                     <descripcion>Un país que une Europa y Asia, famoso por sus ruinas antiguas y paisajes únicos.</descripcion>
                 </destino>
-                <destino id = "1">
+                <destino id="1">
                     <nombre>Dublin</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Dublin"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Dublin"/>
                     <descripcion>Capital de Irlanda, famosa por su historia y cultura.</descripcion>
                 </destino>
             </destinos>
@@ -154,14 +153,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
             <nombre>Europair</nombre>
             <url>https://www.europair.com</url>
             <destinos>
-                <destino id = "7">
+                <destino id="7">
                     <nombre>Berlin</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Berlin"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Berlin"/>
                     <descripcion>Capital de Alemania, famosa por su historia, museos y arquitectura moderna.</descripcion>
                 </destino>
-                <destino id = "5">
+                <destino id="5">
                     <nombre>Roma</nombre>
-                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Roma"></img>
+                    <img enlace="C:\Users\anazk\OneDrive\Escritorio\RetoLMS\RECURSOS/XML_XSD/Roma"/>
                     <descripcion>La ciudad eterna, llena de historia y monumentos impresionantes.</descripcion>
                 </destino>
             </destinos>
@@ -186,7 +185,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/XML/XMLDocument.xml to edit this 
                 <numero2>555555555</numero2>
             </contacto>  
         </usuario>
-    </usuarios>  
+    <usuario sexo="on" dni="A64417996F"><nombre>An</nombre><apellido>Azkona</apellido><clave>1234</clave><numTel>españa652935809</numTel><contacto><correo>anazkona0512@gmail.com</correo></contacto><publicidad>Sí</publicidad></usuario><usuario sexo="on" dni="A23439940B"><nombre>An</nombre><apellido>Azkona</apellido><clave>1234</clave><numTel>españa652935809</numTel><contacto><correo>anazkona0512@gmail.com</correo></contacto><publicidad>Sí</publicidad></usuario><usuario sexo="on" dni="79399784N"><nombre>An</nombre><apellido>Azkona</apellido><clave>1234</clave><numTel>españa652935809</numTel><contacto><correo>anazkona0512@gmail.com</correo></contacto><publicidad>Sí</publicidad></usuario><usuario sexo="M" dni="30557646F"><nombre>sas</nombre><apellido>dagfd</apellido><clave>1234</clave><numTel>paisesbajos123456789</numTel><contacto><correo>sad@safa.com</correo></contacto><publicidad>Sí</publicidad></usuario></usuarios>  
     <vuelos>
         <vuelo id="1">
             <destinoId>1</destinoId>

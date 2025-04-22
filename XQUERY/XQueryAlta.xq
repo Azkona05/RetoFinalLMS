@@ -6,7 +6,7 @@ declare variable $telefono external;
 declare variable $publicidad external;
 
 (: Cargar el documento :)
-declare variable $doc := doc("C:/xampp/htdocs/RETO/XML/RetoFinal.xml");
+declare variable $doc := doc("C:/xampp/htdocs/RETO/XML/RetoFinalXML.xml");
 
 (: Crear el nuevo usuario :)
 let $nuevo :=

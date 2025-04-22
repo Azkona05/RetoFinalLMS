@@ -1,6 +1,6 @@
 (: declare variable $doc := doc("RetoFinal.xml"); 
 delete node $doc/agenciaViajes/usuarios/usuario[@dni = "12345678A"] :) 
-declare variable $doc := doc("RetoFinal.xml");
+declare variable $doc := doc("RetoFinalXML.xml");
 insert node 
 <usuario sexo="F" dni="98765432C">
     <nombre>Laura</nombre>

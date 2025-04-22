@@ -1,4 +1,5 @@
 <?php
+$dni = $_POST['dni'] ?? '';
 $nombre = $_POST['nombre'] ?? '';
 $apellidos = $_POST['apellidos'] ?? '';
 $sexo = $_POST['sexo'] ?? '';
@@ -14,36 +15,72 @@ if ($contraseña1 !== $contraseña2) {
     exit;
 }
 
-// Inserción del nuevo usuario
-$insertCommand = sprintf(
-    'basex -bnombre=%s -bapellidos=%s -bsexo=%s -bgmail=%s -btelefono=%s -bpublicidad=%s ../XQUERY/InsertarUsuario.xq',
-    escapeshellarg($nombre),
-    escapeshellarg($apellidos),
-    escapeshellarg($sexo),
-    escapeshellarg($gmail),
-    escapeshellarg($prefijo . $telefono),
-    escapeshellarg($publicidad)
-);
-shell_exec($insertCommand);
-
-// Mostrar todos los usuarios (tras la inserción)
-$mostrarCommand = 'basex ../XQUERY/MostrarUsuarios.xq';
-$output = shell_exec($mostrarCommand);
-
-if (!$output) {
-    echo "Error al obtener la lista de usuarios.";
+// Validar formato del DNI
+if (!preg_match('/^[0-9]{8}[A-Za-z]$/', $dni)) {
+    echo "El DNI no tiene un formato válido (8 números y 1 letra).";
     exit;
 }
 
-// Transformar XML con XSLT
-$xml = new DOMDocument();
-$xml->loadXML($output);
+// Validar que la letra del DNI sea correcta
+function letraDNI($dni) {
+    $letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+    $numero = substr($dni, 0, 8);
+    $letra = strtoupper(substr($dni, -1));
+    $letraCorrecta = $letras[$numero % 23];
+    return $letra === $letraCorrecta;
+}
 
+if (!letraDNI($dni)) {
+    echo "La letra del DNI no es válida.";
+    exit;
+}
+
+// Cargar el XML y el XSLT
+$xmlFile = '../XML/RetoFinalXML.xml'; // Ajusta la ruta a tu carpeta XML
+$xslFile = '../XSLT/usuarios.xsl';
+
+//Cargar el XSL y el XML
 $xsl = new DOMDocument();
-$xsl->load('../XSLT/Usuarios.xsl');
+$xsl->load($xslFile);
+$xml = new DOMDocument();
+$xml->load($xmlFile);
 
-$xslt = new XSLTProcessor();
-$xslt->importStylesheet($xsl);
+$xpath = new DOMXPath($xml);
+$usuariosExistentes = $xpath->query("//usuario[@dni='$dni']");
 
-echo $xslt->transformToXML($xml);
+if ($usuariosExistentes->length > 0) {
+    echo "El DNI ya está registrado. Por favor, utiliza otro.";
+    exit;
+}
+// Buscar el nodo <usuarios>
+$usuarios = $xml->getElementsByTagName('usuarios')->item(0);
+
+// Crear nuevo nodo <usuario>
+$usuario = $xml->createElement('usuario');
+$usuario->setAttribute('sexo', $sexo);
+$usuario->setAttribute('dni', $dni);
+
+// Subnodos
+$usuario->appendChild($xml->createElement('nombre', $nombre));
+$usuario->appendChild($xml->createElement('apellido', $apellidos));
+$usuario->appendChild($xml->createElement('clave', $contraseña1));
+$usuario->appendChild($xml->createElement('numTel', $prefijo . $telefono));
+
+$contacto = $xml->createElement('contacto');
+$contacto->appendChild($xml->createElement('correo', $gmail));
+$usuario->appendChild($contacto);
+
+$usuario->appendChild($xml->createElement('publicidad', $publicidad));
+
+// Añadir a <usuarios>
+$usuarios->appendChild($usuario);
+
+// Guardar
+$xml->formatOutput = true;
+$xml->save($xmlFile);
+
+$proc = new XSLTProcessor();
+$proc->importStylesheet($xsl);
+
+echo $proc->transformToXML($xml);
 ?>

@@ -35,17 +35,19 @@
 			<!--FORMULARIO-->
 			<form action="../PHP/Form.php" method="post">
 				<!--NOMBRE Y APELLIDO-->
+				<label for="dni">DNI:</label><br>
+				<input type="text" id="dni" name="dni" pattern="^[0-9]{8}[A-Za-z]$" title="Debe tener 8 números seguidos de una letra" required>
 				<label for="nombre">Nombre:</label><br>
 				<input type="text" id="nombre" name="nombre"required><br>
 				<label for="apellidos">Apellidos:</label><br>
 				<input type="text" id="apellidos" name="apellidos" required><br/>
 				<!--SEXO-->
 				<label for="sexo" required>Sexo con el que se identifica:</label><br>
-				<input type="radio" id="hombre" name="sexo" required>
+				<input type="radio" id="hombre" name="sexo" value="H">
 				<label for="hombre">Hombre</label><br>
-				<input type="radio" id="mujer" name="sexo">
+				<input type="radio" id="mujer" name="sexo" value="M">
 				<label for="mujer">Mujer</label><br>
-				<input type="radio" id="otros" name="sexo">
+				<input type="radio" id="otros" name="sexo" value="O">
 				<label for="otros">Otros</label><br/>
 				<!--GMAIL-->
 				<label for="gmail">Introduzca un correo electr&oacute;nico:</label><br/>
@@ -60,21 +62,21 @@
 				<label for="telefono">Introduzca un tel&eacute;fono de contacto:</label><br/>
 				<select name="prefijo" id="prefijo" required>
 					<option value=""></option>
-					<option value="españa">España: +34</option>
-					<option value="alemania">Alemania: +49</option>
-					<option value="francia">Francia: +33</option>
-					<option value="italia">Italia: +39</option>
-					<option value="reinounido">Reino Unido: +44</option>
-					<option value="rusia">Rusia: +7</option>
-					<option value="ucrania">Ucrania: +380</option>
-					<option value="polonia">Polonia: +48</option>
-					<option value="rumania">Rumania: +40</option>
-					<option value="paisesbajos">Países Bajos: +31</option>
-					<option value="belgica">Bélgica: +32</option>
-					<option value="grecia">Grecia: +30</option>
-					<option value="portugal">Portugal: +351</option>
-					<option value="suecia">Suecia: +46</option>
-					<option value="noruega">Noruega: +47</option>
+					<option value="+34">España: +34</option>
+					<option value="+49">Alemania: +49</option>
+					<option value="+33">Francia: +33</option>
+					<option value="+39">Italia: +39</option>
+					<option value="+44">Reino Unido: +44</option>
+					<option value="+7">Rusia: +7</option>
+					<option value="+380">Ucrania: +380</option>
+					<option value="+48">Polonia: +48</option>
+					<option value="+40">Rumania: +40</option>
+					<option value="+31">Países Bajos: +31</option>
+					<option value="+32">Bélgica: +32</option>
+					<option value="+30">Grecia: +30</option>
+					<option value="+351">Portugal: +351</option>
+					<option value="+46">Suecia: +46</option>
+					<option value="+47">Noruega: +47</option>
 				</select>
 				<input type="text" id="telefono" name="telefono" required><br/>
 				<!--PUBLICIDAD Y TÉRMINOS-->
